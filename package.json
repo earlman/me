@@ -1,0 +1,22 @@
+{
+  "name": "earlman.me",
+  "version": "1.0.0",
+  "description": "Just a blog about me",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/earlman/me.git"
+  },
+  "author": "Earl Man <np.foundations@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/earlman/me/issues"
+  },
+  "homepage": "https://github.com/earlman/me#readme"
+}

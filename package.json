@@ -21,8 +21,5 @@
     "url": "https://github.com/earlman/me/issues"
   },
   "homepage": "https://github.com/earlman/me#readme",
-  "devDependencies": {
-    "html-webpack-plugin": "^3.2.0",
-    "vuepress": "^1.2.0"
-  }
+  "devDependencies": {}
 }

@@ -1,0 +1,7 @@
+{
+  "name": "@earlman.me/docs",
+  "version": "0.0.1",
+  "dependencies": {
+    "vuepress": "^1.2.0"
+  }
+}

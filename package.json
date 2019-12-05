@@ -8,7 +8,11 @@
     "build:docs": "vuepress build docs"
   },
   "private": true,
-  "workspaces": ["docs", "server", "site"],
+  "workspaces": [
+    "docs",
+    "server",
+    "site"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/earlman/me.git"
@@ -19,5 +23,7 @@
     "url": "https://github.com/earlman/me/issues"
   },
   "homepage": "https://github.com/earlman/me#readme",
-  "devDependencies": {}
+  "devDependencies": {
+    "commitizen": "^4.0.3"
+  }
 }

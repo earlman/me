@@ -1,4 +1,6 @@
 # earlman.me
 just a blog about me 
 
-![Overview of Publishing Flow](/docs/assets/publishflow.png)
+![Diagram of Site Architecture](/docs/assets/sitearchitecture.png)
+
+![Flowchart of Publishing Process](/docs/assets/publishflow.png)

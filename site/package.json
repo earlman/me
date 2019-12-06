@@ -7,6 +7,8 @@
         "explore": "gridsome explore"
     },
     "dependencies": {
-        "gridsome": "^0.7.11"
+        "gridsome": "^0.7.11",
+        "node-sass": "^4.13.0",
+        "sass-loader": "7.*"
     }
 }

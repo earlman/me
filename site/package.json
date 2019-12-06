@@ -1,7 +1,12 @@
 {
-  "name": "@earlman.me/site",
-  "version": "0.0.1",
-  "dependencies": {
-    "gridsome": "^0.7.11"
-  }
+    "name": "@earlman.me/site",
+    "version": "0.0.1",
+    "scripts": {
+        "build": "gridsome build",
+        "develop": "gridsome develop",
+        "explore": "gridsome explore"
+    },
+    "dependencies": {
+        "gridsome": "^0.7.11"
+    }
 }

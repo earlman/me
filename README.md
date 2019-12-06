@@ -27,7 +27,7 @@ This architecture was designed with two main principles in mind:
 
 ### Technology and Services
 
-| Name  | Area of Concern | Purpose |
+| Name  | Area of Concern | Description |
 | ------------- | ------------- | ------------- |
 | [Netlify](https://www.netlify.com/) | `site`,  `server`, `docs` | Everybody's favorite static site host. See [below](#netlifys-responsibilities) for more details. |
 | [Gridsome](https://gridsome.org/) | `site` | A static site generator based on VueJS and Graphql. |

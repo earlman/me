@@ -29,17 +29,29 @@ This architecture was designed with two main principles in mind:
 
 | Name  | Area of Concern | Purpose |
 | ------------- | ------------- | ------------- |
-| Netlify | `site`,  `server`, `docs` | Everybody's favorite static site host. See below for more details. |
-| Content Cell  | Content Cell  |
+| [Netlify](https://www.netlify.com/) | `site`,  `server`, `docs` | Everybody's favorite static site host. See [below](#netlifys-responsibilities) for more details. |
+| [Gridsome](https://gridsome.org/) | `site` | A static site generator based on VueJS and Graphql. |
+| [NetlifyCMS](https://www.netlifycms.org/) | `site`, `content` | A content management system built for the git workflow. |
+| [Vuepress](https://vuepress.vuejs.org/) | `docs` | An opinionated documentation (and static site) generator that comes with a lot of helpful functionality. |
+| [Github Actions](https://vuepress.vuejs.org/) | `site`, `server`, `content` | Instrumental for making sure the site gets updated regardless of how you change the content. See [below](#publishing-process) for more details. |
+| [Netlify Functions](https://www.netlify.com/products/functions/) | `site` | Currently the leading option for hosting an API on this blog |
 
 ### Netlify's Responsibilities
 
-![Flowchart of Publishing Process](/docs/assets/site-architecture-netlify.png)
+Netlify will be used to host three separate subdomains. One for the blog, one for the docs, and one for the API. 
+
+![Netlify's Responsibilities](/docs/assets/site-architecture-netlify.png)
 
 
+### Publishing Process
 
+<img src="/docs/assets/publish-flow.png" width="400px"/>
+Behind the scenes, this is as complicated as it looks. For the user, it should work like a charm. The architecture, and more specifically github, should allow me ultimate flexibility in how I want to add my content. Here's 4 possiblities.
 
-![Flowchart of Publishing Process](/docs/assets/publish-flow.png)
+* Adding a new file directly on the Github interface.
+* Pushing new content with [Working Copy](https://workingcopyapp.com/) an iOS Git client
+* Commiting with VSCode
+* Sending a request to api.earlman.me. This functionality is far from critical, but the API will theoretically [give me all sorts of features for interacting with my data.](https://micropub.rocks/implementation-reports/servers/)
 
 ### Extra's
 

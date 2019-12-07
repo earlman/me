@@ -1,8 +1,8 @@
 *.log
 .cache
 .DS_Store
-src/.temp
+site/src/.temp
 node_modules
-dist
+*dist/
 .env
 .env.*

@@ -9,6 +9,8 @@
     "dependencies": {
         "gridsome": "^0.7.11",
         "node-sass": "^4.13.0",
-        "sass-loader": "7.*"
+        "sass-loader": "7.*",
+        "typeface-merriweather": "^0.0.72",
+        "typeface-open-sans": "^0.0.75"
     }
 }

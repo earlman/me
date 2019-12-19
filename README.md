@@ -2,6 +2,8 @@
 
 > A JAMstack blog with carefully considered architecture.
 
+2019/12/19: There's been a lot of good progress in the last couple weeks. It's the type of progress that one can be confident in, without cut corners or compromises on the original specifications. All the initial design work has been complete and all the infrastructure has been meticulously implemented. There's been a strong focus on the documentation that will hopefully pay dividends as I start really building things out. I hope to have the pages developed by Jan 10, 2020.
+
 2019/12/05: This repo will hold the contents of my blog&mdash;possibly the longest running project I have. With over 300,000 words written over the course of 6 years... well, it's a pity that I don't currently have a presence online. I did too much experimentation on the Wordpress blog I had and ended up taking it down, but I love fresh starts leggo.
 
 ## Architecture

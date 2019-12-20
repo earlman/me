@@ -56,7 +56,7 @@ Behind the scenes, this is as complicated as it looks. For the user, it should w
 * Commiting with VSCode
 * Sending a request to api.earlman.me. This functionality is far from critical, but the API will theoretically [give me all sorts of features for interacting with my data.](https://micropub.rocks/implementation-reports/servers/)
 
-### Extra's
+### Extras
 
 #### Why I'm using a submodule for the Content
 The most important components to any blog is the Content and the Site. By 'Site', I'm specifically referring to what the user sees and interacts with. 'Content' is all the posts. The Content has pretty much always been stored in its own database and managed separately. Some Sites, like Wordpress, access this data on-the-fly. The method that's gotten the most buzz recently is building the site with a static site generator (Gridsome, eleventy, Jekyll, Hugo), and serving that. This creates loads of improvements on the client's end, since they don't need hit your database twice.

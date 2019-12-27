@@ -2,13 +2,14 @@
     "name": "@earlman.me/site",
     "version": "0.0.1",
     "scripts": {
+        "start": "gridsome develop",
         "build": "gridsome build",
         "develop": "gridsome develop",
         "explore": "gridsome explore"
     },
     "dependencies": {
         "gridsome": "^0.7.11",
-        "node-sass": "^4.13.0",
+        "sass": "^1.24.0",
         "sass-loader": "7.*",
         "typeface-merriweather": "^0.0.72",
         "typeface-open-sans": "^0.0.75"

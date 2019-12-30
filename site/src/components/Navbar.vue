@@ -4,12 +4,13 @@
 			<ul class="menu">
 				<div class="logo">
 					<g-link to="/">
-						<img
-							src="../favicon.png"
-							alt="Metal Law Group Logo"
-							height="100"
-							width="100"
-						/>
+						<!-- <img
+                            src="../favicon.png"
+                            alt="Metal Law Group Logo"
+                            height="100"
+                            width="100"
+						/>-->
+						<p class="logo">earlman.me</p>
 					</g-link>
 				</div>
 				<li
@@ -38,14 +39,14 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-@import '../styles/04 - Layout/media' 
 
 header
     justify-self: center
-    width: 100vw
+    width: 100%
     display: flex
     flex-direction: column
-    align-items: center
+    align-items: stretch
+    
 
     .menu
         width: 100%
@@ -53,8 +54,6 @@ header
         justify-content: space-around            
         align-items: flex-end
         flex-wrap: wrap
-        width: 88vw
-        max-width: 1400px
         margin-top: 20px
         @include landscape
             justify-content: space-between

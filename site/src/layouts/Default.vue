@@ -1,7 +1,12 @@
 <template>
-	<div class="layout">
-		<Navbar />
-		<slot />
+	<div>
+		<div class="accent-bar"></div>
+		<div class="navbar">
+			<Navbar />
+		</div>
+		<div class="layout">
+			<slot />
+		</div>
 	</div>
 </template>
 
@@ -23,5 +28,16 @@ export default {
 };
 </script>
 
-<style>
+<style lang="sass">
+
+.accent-bar
+    width: 100vw
+    height: 10px
+    background-color: var(--color-a)
+
+.navbar
+    width: var(--layout-width)
+    max-width: var(--layout-max-width)
+    margin: auto
+
 </style>

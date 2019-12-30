@@ -10,7 +10,7 @@ function addStyleResource(rule) {
         .loader('style-resources-loader')
         .options({
             patterns: [
-                path.resolve(__dirname, './src/styles/04 - Layout/_layout.sass'),
+                path.resolve(__dirname, './src/styles/04 - Layout/_media.sass'),
             ],
         })
 }

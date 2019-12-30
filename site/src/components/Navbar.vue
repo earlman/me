@@ -1,21 +1,21 @@
 <template>
 	<header>
-		<nav>
-			<ul class="menu">
-				<div class="logo">
-					<g-link to="/">
-						<!-- <img
+		<nav class="menu">
+			<div class="logo">
+				<g-link to="/">
+					<!-- <img
                             src="../favicon.png"
                             alt="Metal Law Group Logo"
                             height="100"
                             width="100"
-						/>-->
-						<p class="logo">earlman.me</p>
-					</g-link>
-				</div>
+					/>-->
+					<p class="logo">earlman.me</p>
+				</g-link>
+			</div>
+			<ul>
 				<li
 					v-for="item in menu"
-					:key="item"
+					:key="item.name"
 				>
 					<g-link :to="item.url">{{item.name}}</g-link>
 				</li>
@@ -54,16 +54,15 @@ header
         justify-content: space-around            
         align-items: flex-end
         flex-wrap: wrap
-        margin-top: 20px
+        margin-top: var(--space-md)
+
         @include landscape
             justify-content: space-between
 
-
         .logo
-            max-width: 300px
-            margin-bottom: var(--space-sm)
-            margin-top: var(--space-md)
-            
+            width: 300px
+            text-align: center
+
         ul
             display: flex
             flex-wrap: wrap

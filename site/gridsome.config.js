@@ -22,6 +22,16 @@ module.exports = {
         {
             use: '@gridsome/source-filesystem',
             options: {
+                path: '../content/pages/*.md',
+                typeName: 'Page',
+                remark: {
+                    // remark options
+                }
+            }
+        },
+        {
+            use: '@gridsome/source-filesystem',
+            options: {
                 path: '../content/articles/*.md',
                 typeName: 'Article',
                 remark: {

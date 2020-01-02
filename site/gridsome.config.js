@@ -14,7 +14,68 @@ function addStyleResource(rule) {
             ],
         })
 }
+
+
 module.exports = {
+    siteName: 'earlman.me',
+    plugins: [
+        {
+            use: '@gridsome/source-filesystem',
+            options: {
+                path: '../content/articles/*.md',
+                typeName: 'Article',
+                remark: {
+                    // remark options
+                }
+            }
+        },
+        {
+            use: '@gridsome/source-filesystem',
+            options: {
+                path: '../content/notes/*.md',
+                typeName: 'Note',
+                remark: {
+                    // remark options
+                }
+            }
+        },
+        {
+            use: '@gridsome/source-filesystem',
+            options: {
+                path: '../content/experience/books/*.md',
+                typeName: 'Book',
+                remark: {
+                    // remark options
+                }
+            }
+        },
+        {
+            use: '@gridsome/source-filesystem',
+            options: {
+                path: '../content/experience/movies/*.md',
+                typeName: 'Movie',
+                remark: {
+                    // remark options
+                }
+            }
+        },
+        {
+            use: '@gridsome/source-filesystem',
+            options: {
+                path: '../content/experience/shows/*.md',
+                typeName: 'Show',
+                remark: {
+                    // remark options
+                }
+            }
+        },
+
+    ],
+    transformers: {
+        remark: {
+            // global remark options
+        }
+    },
     chainWebpack(config) {
         // Load variables for all vue-files
         const types = ['vue-modules', 'vue', 'normal-modules', 'normal']
@@ -24,6 +85,4 @@ module.exports = {
         })
 
     },
-    siteName: 'Gridsome',
-    plugins: []
 }

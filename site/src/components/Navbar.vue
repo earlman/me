@@ -18,6 +18,14 @@
 					:key="item.name"
 				>
 					<g-link :to="item.url">{{item.name}}</g-link>
+					<ul v-if="item.submenu">
+						<li
+							v-for="subitem in item.submenu"
+							:key="subitem.name"
+						>
+							<g-link :to="subitem.url">{{subitem.name}}</g-link>
+						</li>
+					</ul>
 				</li>
 			</ul>
 		</nav>
@@ -30,8 +38,38 @@ export default {
 	data() {
 		return {
 			menu: [
-				{ name: "action", url: "/action" },
-				{ name: "experience", url: "/experience" }
+				{
+					name: "action",
+					url: "/act",
+					submenu: [
+						{
+							name: "articles",
+							url: "/act/articles"
+						},
+						{
+							name: "notes",
+							url: "/act/notes"
+						}
+					]
+				},
+				{
+					name: "experience",
+					url: "/exp",
+					submenu: [
+						{
+							name: "books",
+							url: "/exp/books"
+						},
+						{
+							name: "shows",
+							url: "/exp/shows"
+						},
+						{
+							name: "movies",
+							url: "/exp/movies"
+						}
+					]
+				}
 			]
 		};
 	}
@@ -94,6 +132,9 @@ header
                     // cursor: pointer
                     background: var(--color-a)
 
+                    > a
+                        color: var(--color-t-alt)
+
                 &:focus-within a
                     outline: none
 
@@ -107,13 +148,22 @@ header
                     opacity: 0
                     display: none
                     left: 0
+                    width: min-content
+
                     li //submenu
-                        min-width: 25ch
+                        width: 100%
+                        
                             
 
 
 li
     list-style: none
 
+.menu a
+    color: var(--color-a)
+
+    &:hover
+        color: var(--color-t-alt)
+        text-decoration: none
 
 </style>

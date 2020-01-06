@@ -1,19 +1,18 @@
 <template>
-	<Layout>
-		<!-- Learn how to use images here: https://gridsome.org/docs/images -->
-		<!-- <g-image alt="Example image" src="~/favicon.png" width="135" />
-
-    <h1>Hello, world!</h1>
-
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores
-    </p>
-
-    <p class="home-links">
-      <a href="https://gridsome.org/docs/" target="_blank" rel="noopener">Gridsome Docs</a>
-      <a href="https://github.com/gridsome/gridsome" target="_blank" rel="noopener">GitHub</a>
-		</p>-->
-	</Layout>
+	<div class="page-container">
+		<section class="hero">
+			<div class="profilepic">
+				<g-image
+					src="~/profilepicture.jpg"
+					alt="Profile Picture"
+					height="600"
+					width="400"
+				/>
+			</div>
+			<div v-html="$page.pageContent.content"></div>
+		</section>
+		<Layout></Layout>
+	</div>
 </template>
 
 <script>
@@ -24,8 +23,41 @@ export default {
 };
 </script>
 
-<style>
-.home-links a {
-	margin-right: 1rem;
+<page-query>
+query {
+    pageContent(id: "landing"){
+        content
+    }
 }
+</page-query>
+
+<style lang="sass" scoped>
+
+.hero
+    width: var(--layout-width)
+    max-width: var(--layout-max-width)
+    display: flex
+    align-items: center
+    justify-content: center    
+    min-height: 50vh
+
+    .profilepic
+        @include portrait
+            display: none
+        @include landscape
+            margin-right: var(--space-md)
+            margin-top: var(--space-lg)
+            margin-bottom: var(--space-lg)
+
+   
+
+.page-container
+    min-height: 100vh
+    display: flex
+    flex-direction: column
+    align-items: center
+
+.profilepic img
+    border-radius: 2px
+    
 </style>

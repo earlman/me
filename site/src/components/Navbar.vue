@@ -102,6 +102,7 @@ header
             width: 300px
             text-align: center
             @include md
+                flex-grow: 1
                 text-align: left
 
         ul

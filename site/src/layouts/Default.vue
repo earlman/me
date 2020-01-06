@@ -1,13 +1,13 @@
 <template>
-	<div>
-		<div class="accent-bar"></div>
-		<div class="navbar">
-			<Navbar />
-		</div>
-		<div class="layout">
-			<slot />
-		</div>
+<div>
+	<div class="accent-bar"></div>
+	<div class="navbar">
+		<Navbar />
 	</div>
+	<body class="layout">
+		<slot />
+	</body>
+</div>
 </template>
 
 <static-query>
@@ -39,5 +39,9 @@ export default {
     width: var(--layout-width)
     max-width: var(--layout-max-width)
     margin: auto
+
+body.layout
+    max-width: var(--layout-max-width)
+    margin: var(--space-xl) auto
 
 </style>

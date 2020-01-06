@@ -4,6 +4,7 @@
 // Changes here require a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
 const path = require('path')
+const moment = require('moment')
 
 function addStyleResource(rule) {
     rule.use('style-resource')
@@ -15,9 +16,28 @@ function addStyleResource(rule) {
         })
 }
 
+function dateToPath(isoString) {
+    const date = moment(isoString)
+    const year = date.format('YYYY')
+    const month = date.format('MM')
+    const day = date.format('DD')
+    const hour = date.format('HH')
+    return year + '/' + month + '/' + day + '/' + hour
+
+}
+
 
 module.exports = {
     siteName: 'earlman.me',
+    templates: {
+        Article: [
+            {
+                path: (node) => {
+                    return `/act/` + dateToPath(node['date-created'])
+                }
+            }
+        ]
+    },
     plugins: [
         {
             use: '@gridsome/source-filesystem',

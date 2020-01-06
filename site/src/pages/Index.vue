@@ -45,7 +45,7 @@ query {
         @include portrait
             display: none
         @include landscape
-            margin-right: var(--space-md)
+            margin-right: var(--space-lg)
             margin-top: var(--space-lg)
             margin-bottom: var(--space-lg)
 

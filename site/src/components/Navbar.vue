@@ -93,6 +93,7 @@ header
         align-items: flex-end
         flex-wrap: wrap
         margin-top: var(--space-md)
+        line-height: 0
 
         @include landscape
             justify-content: space-between
@@ -100,6 +101,8 @@ header
         .logo
             width: 300px
             text-align: center
+            @include md
+                text-align: left
 
         ul
             display: flex

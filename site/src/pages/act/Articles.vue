@@ -1,11 +1,11 @@
 <template>
 	<Layout>
-		<h1>Article Template</h1>
+		<h1>Articles</h1>
 		<p
 			v-for="article in $page.articles.edges"
 			:key="article.node.id"
 		>
-			<g-link :href="article.node.path">{{article.node.title}}</g-link>
+			<g-link :to="article.node.path">{{article.node.title}}</g-link>
 		</p>
 	</Layout>
 </template>

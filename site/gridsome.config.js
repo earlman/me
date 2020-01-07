@@ -36,7 +36,40 @@ module.exports = {
                     return `/act/` + dateToPath(node['date-created'])
                 }
             }
-        ]
+        ],
+        Note: [
+            {
+                path: (node) => {
+                    return `/act/` + dateToPath(node['date-created'])
+                }
+            }
+        ],
+        Movie: [
+            {
+                component: './src/templates/Exp.vue',
+                path: (node) => {
+                    return `/exp/` + dateToPath(node['date-completed'])
+                }
+            }
+        ],
+        // Show: [
+        //     {
+        //         component: './src/templates/Exp.vue',
+        //         path: (node) => {
+        //             return `/exp/` + dateToPath(node['date-completed'])
+        //         }
+        //     }
+        // ],
+        Book: [
+            {
+                component: './src/templates/Exp.vue',
+                path: (node) => {
+                    return `/exp/` + dateToPath(node['date-completed'])
+                }
+            }
+        ],
+
+
     },
     plugins: [
         {

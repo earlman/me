@@ -4,9 +4,9 @@
 	<div class="navbar">
 		<Navbar />
 	</div>
-	<body class="layout">
+	<main class="layout">
 		<slot />
-	</body>
+	</main>
 </div>
 </template>
 
@@ -40,7 +40,7 @@ export default {
     max-width: var(--layout-max-width)
     margin: auto
 
-body.layout
+main.layout
     max-width: var(--layout-max-width)
     margin: var(--space-xl) auto
 

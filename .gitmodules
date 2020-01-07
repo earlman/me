@@ -1,7 +1,7 @@
 [submodule "content"]
 	path = content
-	url = git@github.com:earlman/me-content.git
+	url = https://github.com/earlman/me-content.git
 [submodule "site/src/styles"]
 	path = site/src/styles
-	url = git@github.com:earlman/me-styles-shipwright.git
+	url = https://github.com/earlman/me-styles-shipwright.git
 	branch = master

@@ -59,5 +59,6 @@ query {
 
 .profilepic img
     border-radius: 2px
+    filter: grayscale(50%) contrast(150%)
     
 </style>

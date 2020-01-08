@@ -22,7 +22,7 @@ export const metaData = {
 
 export const Default = () => ({
     components: { MetaInfo },
-    template: `<meta-info :datetime="datetime" :tags="tags"/>`,
+    template: `<div><meta-info :datetime="datetime" :tags="tags"/><p>This is a sample note.</p></div>`,
     props: {
         datetime: {
             default: metaData.datetime

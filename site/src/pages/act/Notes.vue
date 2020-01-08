@@ -5,6 +5,7 @@
 			v-for="note in $page.notes.edges"
 			:key="note.node.id"
 		>
+			<meta-info :datetime="note.node.date_created" />
 			<g-link :to="note.node.path">
 				<div v-html="note.node.content"></div>
 			</g-link>
@@ -20,6 +21,7 @@ query {
                 id
                 path
                 content
+                date_created
             }
         }
     }
@@ -27,7 +29,12 @@ query {
 </page-query>
 
 <script>
-export default {};
+import MetaInfo from "@/components/MetaInfo";
+export default {
+	components: {
+		MetaInfo
+	}
+};
 </script>
 
 <style lang="sass" scoped>

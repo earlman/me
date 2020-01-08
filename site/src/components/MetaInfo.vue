@@ -1,12 +1,26 @@
 <template>
-	<div>
-		<p>{{date}}</p>
-		<p>{{time}}</p>
-		<ul>
+	<div class="metainfo">
+		<time
+			:datetime="datetime"
+			v-if="showDate || showTime"
+		>
+			<div v-if="showDate">
+				<span>{{date}}</span>
+				<!-- <span>·</span> -->
+			</div>
+			<div v-if="showTime">
+				<span>{{time}}</span>
+				<!-- <span>·</span> -->
+			</div>
+		</time>
+
+		<ul v-if="showTags">
 			<li
 				v-for="(tag, index) in tags"
 				:key="index"
-			>{{tag}} |</li>
+			>
+				<span>{{tag}}</span>
+			</li>
 		</ul>
 	</div>
 </template>
@@ -24,9 +38,17 @@ export default {
 			type: Array,
 			default: ["Tag 1", "Tag 2", "Tag 3"]
 		},
+		showDate: {
+			type: Boolean,
+			default: true
+		},
 		showTime: {
 			type: Boolean,
 			default: false
+		},
+		showTags: {
+			type: Boolean,
+			default: true
 		}
 	},
 
@@ -41,9 +63,34 @@ export default {
 };
 </script>
 
-<style lang="css" scoped>
-li {
-	list-style-type: none;
-	display: inline-block;
-}
+<style lang="sass" scoped>
+.metainfo 
+    display: flex
+    margin-bottom: var(--space-xs)
+
+    *
+        margin-right: var(--space-xs)
+    
+    *:last-child
+        margin-right: 0
+
+    time
+        display: flex
+
+    ul
+        margin-bottom: 0 // reset default styles
+
+    li 
+        list-style-type: none
+        display: inline-block
+
+    *:not(li) + *:before
+        content: " · "
+        margin-right: var(--space-xs)
+
+//presentational
+*
+    color: var(--color-a)
+    
+
 </style>

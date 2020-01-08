@@ -11,7 +11,10 @@
 			</div>
 			<div v-html="$page.pageContent.content"></div>
 		</section>
-		<Layout></Layout>
+		<Layout
+			class="layout"
+			coloredNav
+		></Layout>
 	</div>
 </template>
 
@@ -60,5 +63,8 @@ query {
 .profilepic img
     border-radius: 2px
     filter: grayscale(50%) contrast(150%)
+
+.layout
+    width: 100%
     
 </style>

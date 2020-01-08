@@ -1,5 +1,8 @@
 <template>
-	<div class="navbar">
+	<div
+		class="navbar"
+		:class="[{default: !colored}, {colored : colored}]"
+	>
 		<div class="accent-bar"></div>
 		<header>
 			<nav class="menu">
@@ -38,6 +41,12 @@
 <script>
 export default {
 	name: "navbar",
+	props: {
+		colored: {
+			type: Boolean,
+			default: false
+		}
+	},
 	data() {
 		return {
 			menu: [
@@ -165,32 +174,34 @@ header
                         
                             
 //presentational
+.accent-bar
+    width: 100%
+    height: 10px
+    background-color: var(--color-t)
 
 li
     list-style: none
 
-.navbar 
-    opacity: .2
+.navbar
+    @include transition
     *
         @include transition
-        color: var(--color-t)
 
-    .accent-bar
-        width: 100vw
-        height: 10px
-        background-color: var(--color-t)
-        
-
+.navbar.default 
+    opacity: .2
+    *
+        color: var(--color-t)      
     &:hover 
         opacity: 1
         --color-t: var(--color-a)
 
-.colored a
-    color: var(--color-a)
-
-    &:hover
-        color: var(--color-t-alt)
+.colored
+    --color-t: var(--color-a)
+    a:hover
+        color: var(--color-t)
         text-decoration: none
+    a:visited
+        color: var(--color-t)
 
 
 </style>

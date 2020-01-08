@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<div class="navbar">
-			<Navbar />
+			<Navbar :colored="coloredNav" />
 		</div>
 		<main class="layout">
 			<slot />
@@ -23,6 +23,12 @@ import Navbar from "~/components/Navbar";
 export default {
 	components: {
 		Navbar
+	},
+	props: {
+		coloredNav: {
+			type: Boolean,
+			default: false
+		}
 	}
 };
 </script>

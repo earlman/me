@@ -5,7 +5,8 @@
         "start": "gridsome develop",
         "build": "gridsome build",
         "develop": "gridsome develop",
-        "explore": "gridsome explore"
+        "explore": "gridsome explore",
+        "storybook": "start-storybook -p 6006 -s public"
     },
     "dependencies": {
         "@gridsome/source-filesystem": "^0.6.2",

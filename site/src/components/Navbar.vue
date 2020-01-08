@@ -1,35 +1,38 @@
 <template>
-	<header>
-		<nav class="menu">
-			<div class="logo">
-				<g-link to="/">
-					<!-- <img
+	<div class="navbar">
+		<div class="accent-bar"></div>
+		<header>
+			<nav class="menu">
+				<div class="logo">
+					<g-link to="/">
+						<!-- <img
                             src="../favicon.png"
                             alt="Metal Law Group Logo"
                             height="100"
                             width="100"
-					/>-->
-					<p class="logo">earlman.me</p>
-				</g-link>
-			</div>
-			<ul>
-				<li
-					v-for="item in menu"
-					:key="item.name"
-				>
-					<g-link :to="item.url">{{item.name}}</g-link>
-					<ul v-if="item.submenu">
-						<li
-							v-for="subitem in item.submenu"
-							:key="subitem.name"
-						>
-							<g-link :to="subitem.url">{{subitem.name}}</g-link>
-						</li>
-					</ul>
-				</li>
-			</ul>
-		</nav>
-	</header>
+						/>-->
+						<p class="logo">earlman.me</p>
+					</g-link>
+				</div>
+				<ul>
+					<li
+						v-for="item in menu"
+						:key="item.name"
+					>
+						<g-link :to="item.url">{{item.name}}</g-link>
+						<ul v-if="item.submenu">
+							<li
+								v-for="subitem in item.submenu"
+								:key="subitem.name"
+							>
+								<g-link :to="subitem.url">{{subitem.name}}</g-link>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		</header>
+	</div>
 </template>
 
 <script>
@@ -79,6 +82,9 @@ export default {
 <style lang="sass" scoped>
 
 header
+    margin: auto
+    width: var(--layout-width)
+    max-width: var(--layout-max-width)
     justify-self: center
     width: 100%
     display: flex
@@ -158,16 +164,33 @@ header
                         width: 100%
                         
                             
-
+//presentational
 
 li
     list-style: none
 
-.menu a
+.navbar 
+    opacity: .2
+    *
+        @include transition
+        color: var(--color-t)
+
+    .accent-bar
+        width: 100vw
+        height: 10px
+        background-color: var(--color-t)
+        
+
+    &:hover 
+        opacity: 1
+        --color-t: var(--color-a)
+
+.colored a
     color: var(--color-a)
 
     &:hover
         color: var(--color-t-alt)
         text-decoration: none
+
 
 </style>

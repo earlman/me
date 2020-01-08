@@ -1,13 +1,12 @@
 <template>
-<div>
-	<div class="accent-bar"></div>
-	<div class="navbar">
-		<Navbar />
+	<div>
+		<div class="navbar">
+			<Navbar />
+		</div>
+		<main class="layout">
+			<slot />
+		</main>
 	</div>
-	<main class="layout">
-		<slot />
-	</main>
-</div>
 </template>
 
 <static-query>
@@ -30,15 +29,7 @@ export default {
 
 <style lang="sass">
 
-.accent-bar
-    width: 100vw
-    height: 10px
-    background-color: var(--color-a)
 
-.navbar
-    width: var(--layout-width)
-    max-width: var(--layout-max-width)
-    margin: auto
 
 main.layout
     max-width: var(--layout-max-width)

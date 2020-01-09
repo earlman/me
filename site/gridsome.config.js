@@ -12,6 +12,7 @@ function addStyleResource(rule) {
         .options({
             patterns: [
                 path.resolve(__dirname, './src/styles/04 - Layout/_media.sass'),
+                path.resolve(__dirname, './src/styles/03 - Spacing/_helpers.sass'),
                 path.resolve(__dirname, './src/styles/animations.sass'),
             ],
         })

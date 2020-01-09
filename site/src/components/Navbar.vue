@@ -95,7 +95,6 @@ header
     width: var(--layout-width)
     max-width: var(--layout-max-width)
     justify-self: center
-    width: 100%
     display: flex
     flex-direction: column
     align-items: stretch

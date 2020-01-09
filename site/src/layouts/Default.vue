@@ -38,7 +38,8 @@ export default {
 
 
 main.layout
+    width: var(--layout-width)
     max-width: var(--layout-max-width)
-    margin: var(--space-xl) auto
+    margin: var(--space-lg) auto
 
 </style>

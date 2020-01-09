@@ -18,6 +18,7 @@
 			<li
 				v-for="(tag, index) in tags"
 				:key="index"
+				class="tags"
 			>
 				<span>{{tag}}</span>
 			</li>
@@ -91,6 +92,9 @@ export default {
 //presentational
 *
     color: var(--color-a)
-    
+
+.tags
+    text-transform: uppercase
+    font-size: .83em
 
 </style>

@@ -54,14 +54,14 @@ module.exports = {
                 }
             }
         ],
-        // Show: [
-        //     {
-        //         component: './src/templates/Exp.vue',
-        //         path: (node) => {
-        //             return `/exp/` + dateToPath(node['date-completed'])
-        //         }
-        //     }
-        // ],
+        Show: [
+            {
+                component: './src/templates/Exp.vue',
+                path: (node) => {
+                    return `/exp/` + dateToPath(node['date-completed'])
+                }
+            }
+        ],
         Book: [
             {
                 component: './src/templates/Exp.vue',

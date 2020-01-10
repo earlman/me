@@ -79,9 +79,6 @@ module.exports = {
             options: {
                 path: '../content/pagecontent/*.md',
                 typeName: 'PageContent',
-                remark: {
-                    // remark options
-                }
             }
         },
         {
@@ -89,9 +86,6 @@ module.exports = {
             options: {
                 path: '../content/articles/*.md',
                 typeName: 'Article',
-                remark: {
-                    // remark options
-                }
             }
         },
         {
@@ -99,9 +93,6 @@ module.exports = {
             options: {
                 path: '../content/notes/*.md',
                 typeName: 'Note',
-                remark: {
-                    // remark options
-                }
             }
         },
         {
@@ -109,9 +100,6 @@ module.exports = {
             options: {
                 path: '../content/experience/books/*.md',
                 typeName: 'Book',
-                remark: {
-                    // remark options
-                }
             }
         },
         {
@@ -119,9 +107,6 @@ module.exports = {
             options: {
                 path: '../content/experience/movies/*.md',
                 typeName: 'Movie',
-                remark: {
-                    // remark options
-                }
             }
         },
         {
@@ -129,16 +114,13 @@ module.exports = {
             options: {
                 path: '../content/experience/shows/*.md',
                 typeName: 'Show',
-                remark: {
-                    // remark options
-                }
             }
         },
 
     ],
     transformers: {
         remark: {
-            // global remark options
+
         }
     },
     chainWebpack(config) {

@@ -1,8 +1,13 @@
 <template>
-	<div>
-		<h1>{{$page.article.title}}</h1>
-		<div v-html="$page.article.content"></div>
-	</div>
+	<Layout>
+		<article>
+			<h1>{{$page.article.title}}</h1>
+			<div
+				v-html="$page.article.content"
+				class="article-content"
+			></div>
+		</article>
+	</Layout>
 </template>
 
 <script>
@@ -21,5 +26,12 @@ query ($id: ID!) {
 </page-query>
 
 <style lang="sass" scoped>
+
+
+    .article-content
+
+        ::v-deep *
+            font-size: 20px
+
 
 </style>

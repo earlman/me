@@ -4,20 +4,35 @@ module.exports = {
     dest: 'dist/docs',
     base: '/docs/',
     themeConfig: {
+        repo: 'earlman/me',
+        docsDir: 'docs',
+        editLinks: true,
         // logo: '/assets/logo.png', //located in public folder
-        // sidebar: [
-        //     ['/', 'Overview'],
-        //     {
-        //         title: 'Articles',
-        //         path: '/articles',
-        //         collapsable: false,
-        //         children: [
-        //             '/articles/metadata',
-        //             '/articles/categories'
-        //         ]
-        //     }
-        // ],
-        // displayAllHeaders: true
+        sidebar: [
+            '/',
+            // 'overview',
+            {
+                title: 'Content',
+                path: '/content/',
+                collapsable: false,
+            },
+            // {
+            //     title: 'Site',
+            //     path: '/site/',
+            //     collapsable: false,
+            // },
+            // {
+            //     title: 'Server',
+            //     path: '/server/',
+            //     collapsable: false,
+            // },
+            // {
+            //     title: 'Docs',
+            //     path: '/docs/',
+            //     collapsable: false,
+            // },
+        ],
+        displayAllHeaders: true
 
 
     },

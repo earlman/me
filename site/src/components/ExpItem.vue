@@ -18,6 +18,10 @@ export default {
 	},
 	methods: {
 		formatTime(dateTime) {
+			if (!dateTime) {
+				return "N/A";
+			}
+
 			const time = moment(dateTime);
 			const threshold = moment().subtract(14, "days"); // 2 weeks ago
 			const threshold2 = moment().subtract(1, "year"); // 1 year ago

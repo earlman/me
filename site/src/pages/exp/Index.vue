@@ -6,27 +6,13 @@
 		</header>
 		<h2>Latest</h2>
 		<h3>Books</h3>
-		<exp-container :items="$page.movies.edges" />
-		<!-- <p
-			v-for="item in $page.books.edges"
-			:key="item.node.id"
-		>
-			<g-link :to="item.node.path">{{item.node.title}}</g-link>
-		</p>-->
+		<exp-container :items="$page.books.edges" />
+
 		<h3>Movies</h3>
-		<p
-			v-for="item in $page.movies.edges"
-			:key="item.node.id"
-		>
-			<g-link :to="item.node.path">{{item.node.title}}</g-link>
-		</p>
+		<exp-container :items="$page.movies.edges" />
+
 		<h3>Shows</h3>
-		<p
-			v-for="item in $page.shows.edges"
-			:key="item.node.id"
-		>
-			<g-link :to="item.node.path">{{item.node.title}}</g-link>
-		</p>
+		<exp-container :items="$page.shows.edges" />
 	</Layout>
 </template>
 
@@ -56,6 +42,12 @@ query {
                 id
                 title
                 path
+                date_published
+                date: date_completed
+                rating {
+                    score
+                    date
+                }
             }
         }
     }
@@ -65,6 +57,12 @@ query {
                 id
                 title
                 path
+                date_published
+                date: date_completed
+                rating {
+                    score
+                    date
+                }
             }
         }
     }

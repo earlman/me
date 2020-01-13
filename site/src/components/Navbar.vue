@@ -3,7 +3,7 @@
 		class="navbar"
 		:class="[{default: !colored}, {colored : colored}]"
 	>
-		<div class="accent-bar"></div>
+		<div class="accent-bar" />
 		<header>
 			<nav class="menu">
 				<div class="logo">
@@ -174,8 +174,6 @@ header
                             
 //presentational
 .accent-bar
-    width: 100%
-    height: 10px
     background-color: var(--color-t)
 
 li

@@ -13,6 +13,7 @@
         "@gridsome/transformer-remark": "^0.4.0",
         "@storybook/vue": "^5.2.8",
         "cheerio": "^1.0.0-rc.3",
+        "core-js": "2.6.11",
         "gridsome": "^0.7.11",
         "remark-containers": "^1.1.2",
         "sass": "^1.24.0",

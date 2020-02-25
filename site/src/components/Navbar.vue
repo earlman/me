@@ -22,7 +22,10 @@
 						v-for="item in menu"
 						:key="item.name"
 					>
-						<g-link :to="item.url">{{item.name}}</g-link>
+						<g-link
+							:to="item.url"
+							:class="item.name"
+						>{{item.name}}</g-link>
 						<ul v-if="item.submenu">
 							<li
 								v-for="subitem in item.submenu"
@@ -89,6 +92,9 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+
+.action
+  pointer-events: none
 
 header
     margin: auto

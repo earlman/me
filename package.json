@@ -30,8 +30,5 @@
         "commitizen": {
             "path": "node_modules/cz-customizable"
         }
-    },
-    "dependencies": {
-        "core-js": "2.6.11"
     }
 }

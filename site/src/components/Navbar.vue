@@ -127,7 +127,7 @@ header
 
         ul
             display: flex
-            flex-wrap: wrap
+            // flex-wrap: wrap
             justify-content: center
             padding: 0
             margin-bottom: 0
@@ -138,7 +138,7 @@ header
             li ul:hover
                 visibility: visible
                 opacity: 1    
-                display: block           
+                display: flex           
 
             li
                 display: block

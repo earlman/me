@@ -28,6 +28,23 @@ function dateToPath(isoString) {
 
 }
 
+function transformContainer(node, config, type, element, defaultTitle) {
+    node.data.hProperties = {
+        className: `custom-block ${type}`
+    };
+    node.children.splice(0, 0, {
+        type: 'paragraph',
+        data: {
+            hName: element,
+            hProperties: {
+                className: 'custom-block-title',
+            },
+        },
+        children: [
+            { type: 'text', value: config || defaultTitle }
+        ]
+    });
+}
 
 module.exports = {
     siteName: 'earlman.me',
@@ -77,17 +94,22 @@ module.exports = {
             externalLinksTarget: "_blank",
             externalLinksRel: ["nofollow", "noopener", "noreferrer"],
             anchorClassName: "icon icon-link",
-            plugins: ["gridsome-plugin-remark-container",
-                // {
-                //     customTypes: {
-                //         custom: {
-                //             defaultTitle: "meta",
-                //             emoji: "💻",
-                //             svg:
-                //                 '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M15 2H1c-.55 0-1 .45-1 1v9c0 .55.45 1 1 1h5.34c-.25.61-.86 1.39-2.34 2h8c-1.48-.61-2.09-1.39-2.34-2H15c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zm0 9H1V3h14v8z"></path></svg>'
-                //         }
-                //     }
-                // }
+            plugins: [
+                [
+                    "gridsome-plugin-remark-container",
+                    {
+                        customTypes: {
+                            meta: {
+                                defaultTitle: "⚪ meta",
+                                emoji: "",
+                                // svg:
+                                //     `<svg id="emoji" viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg"><g id="line"><circle cx="36" cy="36.0001" r="28" fill="none" stroke="#000" stroke-linejoin="round" stroke-width="2" /></g></svg>`
+                            }
+                        },
+                        useDefaultTypes: false,
+
+                    }
+                ]
             ]
         }
     },

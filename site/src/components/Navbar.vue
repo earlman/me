@@ -94,7 +94,7 @@ export default {
 <style lang="sass" scoped>
 
 .action
-  pointer-events: none
+    pointer-events: none
 
 header
     margin: auto
@@ -180,7 +180,7 @@ header
                             
 //presentational
 .accent-bar
-    background-color: var(--color-t)
+    background-color: var(--color-a-bar)
 
 li
     list-style: none
@@ -193,18 +193,17 @@ li
 .navbar.default 
     opacity: .2
     *
-        color: var(--color-t)      
+        color: var(--color-p)      
     &:hover 
         opacity: 1
-        --color-t: var(--color-a)
 
 .colored
-    --color-t: var(--color-a)
+    --color-t: var(--color-p)
     a:hover
-        color: var(--color-t)
+        color: var(--color-p)
         text-decoration: none
     a:visited
-        color: var(--color-t)
+        color: var(--color-p)
 
 
 </style>

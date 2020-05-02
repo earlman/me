@@ -91,7 +91,7 @@ export default {
 
 //presentational
 *
-    color: var(--color-a)
+    color: var(--color-t-c)
 
 .tags
     text-transform: uppercase

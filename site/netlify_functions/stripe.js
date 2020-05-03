@@ -27,6 +27,8 @@ function charge(token) {
         source: token,
     }).then(r => {
         return r
+    }, err => {
+        return err
     })
 
 }

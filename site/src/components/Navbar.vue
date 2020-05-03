@@ -119,6 +119,7 @@ header
             justify-content: space-between
 
         .logo
+            margin: 0
             width: 300px
             text-align: center
             @include md

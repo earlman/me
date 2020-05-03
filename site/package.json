@@ -4,6 +4,7 @@
     "scripts": {
         "start": "gridsome develop",
         "build": "gridsome build",
+        "serve:lambda": "netlify-lambda serve netlify_functions",
         "develop": "gridsome develop",
         "explore": "gridsome explore",
         "storybook": "start-storybook -p 6006 -s public"
@@ -15,6 +16,7 @@
         "cheerio": "^1.0.0-rc.3",
         "gridsome": "^0.7.13",
         "gridsome-plugin-remark-container": "^0.1.3",
+        "netlify-lambda": "^1.6.3",
         "remark-containers": "^1.1.2",
         "sass": "^1.24.0",
         "sass-loader": "7.*",
@@ -24,6 +26,7 @@
     },
     "devDependencies": {
         "moment": "^2.24.0",
+        "netlify-cli": "^2.48.0",
         "style-resources-loader": "^1.3.3"
     }
 }

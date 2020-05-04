@@ -7,7 +7,9 @@
 						v-for="option in options"
 						:key="option"
 						@click="setPrice(option)"
-					>{{option}}</li>
+					>
+						<span class="item">{{option}}</span>
+					</li>
 					<li @click="setCustom">custom</li>
 				</ul>
 				<div
@@ -31,7 +33,7 @@
 		</section>
 		<section
 			class="card"
-			v-if="price > 0"
+			v-show="price > 0"
 		>
 			<stripe />
 		</section>
@@ -90,6 +92,7 @@ export default {
         border: none
         font-size: var(--d-2xl)
         width: 50px
+        padding-bottom: 3px
 
 .dollar
     display: flex
@@ -135,10 +138,11 @@ export default {
 
     > *
         cursor: pointer
-
         line-height: 30px
         font-size: var(--d-md)
         @include space-inline(var(--space-xs))
 
+        .item:hover
+            color: var(--color-t)
 
 </style>

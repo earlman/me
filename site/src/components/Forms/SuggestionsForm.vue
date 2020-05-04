@@ -8,15 +8,17 @@
 				<div
 					v-for="topic in topics"
 					:key="topic.id"
-					class="checkbox"
 				>
-					<input
-						type="checkbox"
-						:value="topic.id"
-						:id="topic.id"
-						v-model="topicsOfInterest"
-					/>
-					<label for="topic.id">{{topic.name}}</label>
+					<label class="check-container">
+						{{topic.name}}
+						<input
+							type="checkbox"
+							:value="topic.id"
+							:id="topic.id"
+							v-model="topicsOfInterest"
+						/>
+						<span class="checkmark"></span>
+					</label>
 				</div>
 			</div>
 			<div
@@ -49,8 +51,8 @@
 export default {
 	data() {
 		return {
-			screen_1: false,
-			screen_2: true,
+			screen_1: true,
+			screen_2: false,
 			topics: [
 				{
 					id: "art_literature",
@@ -130,6 +132,48 @@ export default {
             height: min-content
             @include space-stack(var(--space-sm))
 
+    .check-container 
+        display: block
+        position: relative
+        padding-left: var(--space-md)
+        margin-bottom: var(--space-3xs)
+        cursor: pointer
+
+        // hide browser checkbox
+        input
+            position: absolute
+            opacity: 0
+            cursor: pointer
+            height: 0
+            width: 0
         
+        // create custom checkbox
+        .checkmark
+            position: absolute
+            top: 8px
+            left: 0
+            border: 3px solid var(--color-t)
+            border-radius: 3px
+            box-shadow: -3px 3px 0px var(--color-a)
+            height: 20px
+            width: 20px
+            box-sizing: border-box
+        
+        .checkmark::after
+            content: ""
+            position: absolute
+            top: 3px
+            left: 3px
+            display: none
+            height: 8px
+            width: 8px
+            background-color: var(--color-t)
+            border-radius: 2px
+            box-sizing: border-box
+
+        input:checked ~ .checkmark::after
+            display: block
+
+
 
 </style>

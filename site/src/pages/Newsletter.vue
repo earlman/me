@@ -22,7 +22,10 @@
 
 			<h3>A note</h3>
 			<p>I’m not starting this newsletter to market my brand. It’s not me trying to find an easy way to make money. This platform was built so I can broadcast my own truth for anyone interested in listening.</p>
-			<p>So why do I think my truth’s so important? Because I work harder than anyone I know trying to turn this planet into something the universe would be proud of. One where *you*, specifically, would gladly spend the rest of your life.</p>
+			<p>
+				So why do I think my truth’s so important? Because I work harder than anyone I know trying to turn this planet into something the universe would be proud of. One where
+				<em>you</em>, specifically, would gladly spend the rest of your life.
+			</p>
 			<p>It’s not just a dream. It’s a puzzle. The pieces are right here in front of us.</p>
 		</div>
 	</Layout>

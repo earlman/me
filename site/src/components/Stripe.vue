@@ -3,7 +3,14 @@
 		<div class="card-container">
 			<div id="card-element"></div>
 		</div>
-		<button v-on:click="purchase">Purchase</button>
+		<button
+			v-if="!loading"
+			v-on:click="purchase"
+		>Purchase</button>
+		<p
+			class="message"
+			v-if="message"
+		>{{message}}</p>
 	</div>
 </template>
 
@@ -17,6 +24,7 @@ export default {
 			stripe: "",
 			elements: "",
 			card: "",
+			loading: false,
 			options: {
 				style: {
 					base: {
@@ -39,7 +47,8 @@ export default {
 						color: "#CCB6B5"
 					}
 				}
-			}
+			},
+			message: null
 		};
 	},
 	methods: {
@@ -47,6 +56,7 @@ export default {
             Includes Stripe.js dynamically
         */
 		includeStripe(URL, callback) {
+			let a = this;
 			let documentTag = document,
 				tag = "script",
 				object = documentTag.createElement(tag),
@@ -76,6 +86,7 @@ export default {
 			this.card.mount("#card-element");
 		},
 		purchase() {
+			this.message = "loading...";
 			this.stripe.createToken(this.card).then(result => {
 				if (result.error) {
 					self.hasCardErrors = true;
@@ -98,9 +109,13 @@ export default {
 				// },
 				data: JSON.stringify(paymentData)
 			});
-
-			console.log(response);
-			return response;
+			this.processResponse(response.data);
+		},
+		processResponse(data) {
+			console.log(data);
+			if (data.status == "succeeded") {
+				this.message = "Thanks! 😁";
+			} else this.message = data.raw.message;
 		}
 	},
 	mounted() {
@@ -129,5 +144,8 @@ export default {
 #card-element
     margin: auto
     width: 100%
+
+.message
+    margin-top: var(--space-xs)
 
 </style>

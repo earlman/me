@@ -1,10 +1,29 @@
 <template>
 	<div class="suggestions-form">
-		<form action>
+		<form
+			name="email"
+			method="post"
+			v-on:submit.prevent="handleSubmit"
+			data-netlify="true"
+			data-netlify-honeypot="bot-field"
+		>
 			<div
 				class="options"
 				v-if="screen_1"
 			>
+				<div class="honeypot">
+					<input
+						type="hidden"
+						name="form-name"
+						value="contact"
+					/>
+					<p hidden>
+						<label>
+							Don’t fill this out:
+							<input name="bot-field" />
+						</label>
+					</p>
+				</div>
 				<div
 					v-for="topic in topics"
 					:key="topic.id"
@@ -15,7 +34,7 @@
 							type="checkbox"
 							:value="topic.id"
 							:id="topic.id"
-							v-model="topicsOfInterest"
+							v-model="formData.topicsOfInterest"
 						/>
 						<span class="checkmark"></span>
 					</label>
@@ -25,7 +44,11 @@
 				class="suggestion"
 				v-if="screen_2"
 			>
-				<textarea rows="8" />
+				<textarea
+					rows="8"
+					placeholder="What would you like to read about?"
+					v-model="formData.suggestion"
+				/>
 			</div>
 			<div class="buttons">
 				<button
@@ -83,7 +106,10 @@ export default {
 					name: "Hobbies & DIY"
 				}
 			],
-			topicsOfInterest: []
+			formData: {
+				suggestion: "",
+				topicsOfInterest: []
+			}
 		};
 	},
 	methods: {
@@ -94,6 +120,30 @@ export default {
 		cancel() {
 			this.screen_1 = true;
 			this.screen_2 = false;
+		},
+		encode(data) {
+			return Object.keys(data)
+				.map(
+					key =>
+						encodeURIComponent(key) +
+						"=" +
+						encodeURIComponent(data[key])
+				)
+				.join("&");
+		},
+		handleSubmit(e) {
+			fetch("/", {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/x-www-form-urlencoded"
+				},
+				body: this.encode({
+					"form-name": e.target.getAttribute("name"),
+					...this.formData
+				})
+			})
+				.then(() => this.$router.push("/success"))
+				.catch(error => alert(error));
 		}
 	}
 };

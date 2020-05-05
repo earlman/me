@@ -103,7 +103,7 @@ export default {
 
 			const response = await axios({
 				method: "post",
-				url: "http://localhost:9000/.netlify/functions/stripe",
+				url: `${window.location.origin}/.netlify/functions/stripe`,
 				// headers: {
 				// 	"Content-Type": "application/json"
 				// },

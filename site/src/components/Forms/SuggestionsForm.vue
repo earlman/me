@@ -153,7 +153,7 @@ export default {
 
 <style lang="sass" scoped>
 .suggestions-form
-    margin: var(--space-lg) 0
+    margin: var(--space-md) 0
     padding: var(--space-md)
     background-color: var(--color-b-alt)
 

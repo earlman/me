@@ -152,6 +152,8 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+
+
 .suggestions-form
     margin: var(--space-md) 0
     padding: var(--space-md)
@@ -163,26 +165,37 @@ export default {
         color: var(--color-p)
 
     form
-        display: grid
-        grid-template-columns: 1fr 1fr
-        align-items: end
-        justify-content: space-between
-        height: min-content
+        @include md
+            display: grid
+            grid-template-columns: 1fr 1fr
+            align-items: end
+            justify-content: space-between
+            height: min-content
 
-        .options
-            grid-column: 1
-            grid-row: 1 / -1
+            .options
+                grid-column: 1
+                grid-row: 1 / -1
+
+            .buttons
+                width: min-content
+                margin-left: auto
+
+        textarea
+            width: 100%
+
+            
 
         .buttons
-            width: min-content
-            margin-left: auto
+            margin-top: var(--space-md)
 
         button
+            margin: auto
             display: block
-            grid-column: 2
             width: 200px
             height: min-content
-            @include space-stack(var(--space-sm))
+            @include space-stack(var(--space-xs))
+
+
 
     .check-container 
         display: block

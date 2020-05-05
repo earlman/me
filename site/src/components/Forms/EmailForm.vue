@@ -72,7 +72,13 @@ export default {
 <style lang="sass" scoped>
 
 .emailinput
-    margin-right: var(--space-md)
+    max-width: 100%
+    margin: var(--space-xs) 0
+    // margin-right: var(--space-md)
+
+    @include md
+        margin: 0 var(--space-sm) 0 0
+
 
     
 </style>

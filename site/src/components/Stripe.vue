@@ -20,7 +20,7 @@ const axios = require("axios");
 export default {
 	data() {
 		return {
-			stripeAPIToken: "pk_test_7OlQe1qbJU3gbQItjamciKNg00RqDI12Sk",
+			stripeAPIToken: "pk_live_4exWmCyY9rxVZsyS2nqbnvdQ00o6gQ4KzO",
 			stripe: "",
 			elements: "",
 			card: "",

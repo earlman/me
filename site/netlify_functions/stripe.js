@@ -1,4 +1,4 @@
-const stripe = require('stripe')('sk_test_AHZ6QoAa4s4OLGDS5rCbaYX500KjT3eAXI');
+const stripe = require('stripe')(process.env.YOUR_ENV_VAR_GOES_HERE);
 
 
 exports.handler = async (event, context, callback) => {

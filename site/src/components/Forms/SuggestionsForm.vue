@@ -144,7 +144,7 @@ export default {
 				})
 			})
 				.then(r => {
-					formData = {
+					this.formData = {
 						suggestion: "",
 						topicsOfInterest: []
 					};

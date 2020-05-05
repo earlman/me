@@ -60,7 +60,9 @@ export default {
 					...this.formData
 				})
 			})
-				.then(() => {})
+				.then(() => {
+					formData = {};
+				})
 				.catch(error => alert(error));
 		}
 	}

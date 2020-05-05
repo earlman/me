@@ -1,7 +1,7 @@
 <template>
 	<div class="suggestions-form">
 		<form
-			name="email"
+			name="suggestions"
 			method="post"
 			v-on:submit.prevent="handleSubmit"
 			data-netlify="true"
@@ -142,7 +142,7 @@ export default {
 					...this.formData
 				})
 			})
-				.then(() => this.$router.push("/success"))
+				.then(() => {})
 				.catch(error => alert(error));
 		}
 	}

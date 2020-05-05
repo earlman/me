@@ -21,10 +21,14 @@ exports.handler = async (event, context, callback) => {
 
 function charge(token) {
     return stripe.charges.create({
-        amount: 999,
+        payment_method_types: ['card'],
+        amount: 1,
         currency: 'usd',
-        description: 'Example charge',
+        description: 'Newsletter Subscription',
         source: token,
+        transfer_data: {
+            destination: 'acct_1Ge83SEdu8iQHjrc'
+        }
     }).then(r => {
         return r
     }, err => {

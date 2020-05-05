@@ -51,6 +51,13 @@ export default {
 			message: null
 		};
 	},
+	props: {
+		amount: {
+			type: Number,
+			default: null,
+			required: true
+		}
+	},
 	methods: {
 		/*
             Includes Stripe.js dynamically
@@ -99,7 +106,9 @@ export default {
 			});
 		},
 		async stripeTokenHandler(token) {
-			const paymentData = { token: token.id };
+			const paymentData = {
+				token: token.id
+			};
 
 			const response = await axios({
 				method: "post",

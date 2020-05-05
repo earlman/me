@@ -14,7 +14,7 @@
 			<suggestions-form />
 
 			<hr />
-			<h3>Spending on yourself</h3>
+			<!-- <h3>Spending on yourself</h3>
 			<p>
 				I think your money is
 				<em>always</em> best spent on whatever provides you the most growth as an individual. So&mdash;after you save up for that iPad + Apple Pencil you’ve been wanting&mdash;consider throwing me a couple dollars for being the one to finally convince you to follow your dreams (hehe a bit dramatic, eh? 😅)
@@ -24,7 +24,7 @@
 				<em>their</em> truth, regardless of how much they’re paid or what’s happening in the outside world.
 			</p>
 			<p>And I assure you: as an artist myself, there is nothing more uplifiting than having my truth valued.</p>
-			<payment-widget />
+			<payment-widget />-->
 
 			<h3>A note</h3>
 			<p>I’m not starting this newsletter to market my brand. It’s not me trying to find an easy way to make money. This platform was built so I can broadcast my own truth for anyone interested in listening.</p>

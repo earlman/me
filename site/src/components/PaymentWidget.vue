@@ -35,7 +35,7 @@
 			class="card"
 			v-show="price > 0"
 		>
-			<stripe />
+			<stripe :amount="price" />
 		</section>
 	</div>
 </template>

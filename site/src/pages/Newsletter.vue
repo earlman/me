@@ -15,8 +15,14 @@
 
 			<hr />
 			<h3>Spending on yourself</h3>
-			<p>I think your money is *always* best spent on whatever provides you the most growth as an individual. So&mdash;after you save up for that iPad + Apple Pencil you’ve been wanting&mdash;consider throwing me a couple dollars for being the one to finally convince you to follow your dreams (hehe a bit dramatic, eh? 😅)</p>
-			<p>But in all seriousness, if you have the means, consider supporting more independent creators&mdash;especially those you’ve been following for a while. These are these people we can count on most to show us *their* truth, regardless of how much they’re paid or what’s happening in the outside world.</p>
+			<p>
+				I think your money is
+				<em>always</em> best spent on whatever provides you the most growth as an individual. So&mdash;after you save up for that iPad + Apple Pencil you’ve been wanting&mdash;consider throwing me a couple dollars for being the one to finally convince you to follow your dreams (hehe a bit dramatic, eh? 😅)
+			</p>
+			<p>
+				But in all seriousness, if you have the means, consider supporting more independent creators&mdash;especially those you’ve been following for a while. These are these people we can count on most to show us
+				<em>their</em> truth, regardless of how much they’re paid or what’s happening in the outside world.
+			</p>
 			<p>And I assure you: as an artist myself, there is nothing more uplifiting than having my truth valued.</p>
 			<payment-widget />
 

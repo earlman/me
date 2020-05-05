@@ -139,10 +139,13 @@ export default {
 				},
 				body: this.encode({
 					"form-name": e.target.getAttribute("name"),
-					...this.formData
+					suggestion: formData.suggestion,
+					topics: formData.topicsOfInterest
 				})
 			})
-				.then(() => {})
+				.then(r => {
+					console.log(r);
+				})
 				.catch(error => alert(error));
 		}
 	}

@@ -3,7 +3,9 @@
     "version": "0.0.1",
     "scripts": {
         "start": "gridsome develop",
-        "build": "gridsome build",
+        "build": "run-p build:**",
+        "build:site": "gridsome build",
+        "build:lambda": "netlify-lambda build netlify_functions",
         "serve:lambda": "netlify-lambda serve netlify_functions",
         "develop": "gridsome develop",
         "explore": "gridsome explore",
@@ -18,6 +20,7 @@
         "gridsome": "^0.7.13",
         "gridsome-plugin-remark-container": "^0.1.3",
         "netlify-lambda": "^1.6.3",
+        "npm-run-all": "^4.1.5",
         "remark-containers": "^1.1.2",
         "sass": "^1.24.0",
         "sass-loader": "7.*",

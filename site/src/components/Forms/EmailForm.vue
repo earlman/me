@@ -61,7 +61,7 @@ export default {
 				})
 			})
 				.then(() => {
-					formData = {};
+					this.formData = {};
 				})
 				.catch(error => alert(error));
 		}

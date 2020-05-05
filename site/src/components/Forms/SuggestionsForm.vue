@@ -9,7 +9,7 @@
 		>
 			<div
 				class="options"
-				v-if="screen_1"
+				v-show="screen_1"
 			>
 				<div class="honeypot">
 					<input
@@ -34,7 +34,8 @@
 							type="checkbox"
 							:value="topic.id"
 							:id="topic.id"
-							v-model="formData.topicsOfInterest"
+							v-model="formData[topic.id]"
+							:name="topic.id"
 						/>
 						<span class="checkmark"></span>
 					</label>
@@ -42,12 +43,13 @@
 			</div>
 			<div
 				class="suggestion"
-				v-if="screen_2"
+				v-show="screen_2"
 			>
 				<textarea
 					rows="8"
 					placeholder="What would you like to read about?"
 					v-model="formData.suggestion"
+					name="suggestion"
 				/>
 			</div>
 			<div class="buttons">
@@ -106,10 +108,7 @@ export default {
 					name: "Hobbies & DIY"
 				}
 			],
-			formData: {
-				suggestion: "",
-				topicsOfInterest: []
-			}
+			formData: {}
 		};
 	},
 	methods: {
@@ -139,15 +138,11 @@ export default {
 				},
 				body: this.encode({
 					"form-name": e.target.getAttribute("name"),
-					suggestion: this.formData.suggestion,
-					topics: this.formData.topicsOfInterest
+					...this.formData
 				})
 			})
 				.then(r => {
-					this.formData = {
-						suggestion: "",
-						topicsOfInterest: []
-					};
+					this.formData = {};
 					console.log(r);
 				})
 				.catch(error => alert(error));

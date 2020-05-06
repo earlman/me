@@ -12,8 +12,8 @@
 			<p>I’m comfortable writing about anything, but I’m doing this to make an impact. Let me know what you wanna spend time on.</p>
 
 			<suggestions-form />
-			<!-- 
-			<p>I'm planning on sending out a newsletter biweekly. In my head it's an amalgamation of thoughts I've had thoughout the week on a bunch of different topics. The email itself will include links to relevant articles and websites that I've found interesting, along with a bit of my commentary. A lot of the links will be to my own articles, because sometimes I find my own thoughts interesting too 😂. It's all subject to change, though, so let's see where this goes.</p>-->
+
+			<p>I'm planning on sending out a newsletter biweekly. In my head it's an amalgamation of thoughts I've had thoughout the week on a bunch of different topics. The email itself will include links to relevant articles and websites that I've found interesting, along with a bit of my commentary. A lot of the links will be to my own articles, because sometimes I find my own thoughts interesting too 😂. It's all subject to change, though, so let's see where this goes.</p>
 
 			<hr />
 			<!-- <h3>Spending on yourself</h3>

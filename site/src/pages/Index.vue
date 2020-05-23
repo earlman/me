@@ -68,7 +68,13 @@ query {
         align-items: center
 
     .text
-        max-width: 500px
+        max-width: 550px
+        
+        ::v-deep p
+            color: var(--color-t-h)
+
+            strong
+                color: var(--color-t-h)
 
 
     .profilepic

@@ -17,10 +17,30 @@
 							cx="75"
 							cy="75"
 							r="75"
-							fill="#F9FFC7"
+							fill="url(#paint0_linear)"
 						/>
+						<defs>
+							<linearGradient
+								id="paint0_linear"
+								x1="60"
+								y1="-20"
+								x2="60"
+								y2="150"
+								gradientUnits="userSpaceOnUse"
+							>
+								<stop
+									offset="0.135417"
+									stop-color="#FEC488"
+								/>
+								<stop
+									offset="1"
+									stop-color="#FEC488"
+								/>
+							</linearGradient>
+						</defs>
 					</svg>
 				</div>
+
 				<div class="text">
 					<div v-html="$page.pageContent.content"></div>
 				</div>
@@ -35,7 +55,7 @@ import Navbar from "@/components/Navbar";
 
 export default {
 	metaInfo: {
-		title: "Hello, world!"
+		title: "Hiya!"
 	},
 	components: {
 		Navbar

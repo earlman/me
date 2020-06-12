@@ -28,11 +28,12 @@ query {
 <style lang="sass">
 
 .model-container
-    background-color: #505050
-    padding: var(--space-md) 0
+    background-color: #3c3644
+    padding: var(--space-lg) 0
     display: grid
     place-items: center
     margin-bottom: var(--space-sm)
+    border-radius: 2px
 
     .model
         width: 350px

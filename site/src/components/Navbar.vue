@@ -64,6 +64,10 @@ export default {
 						{
 							name: "notes",
 							url: "/act/notes"
+						},
+						{
+							name: "philosophy",
+							url: "/act/philosophy"
 						}
 					]
 				},

@@ -167,5 +167,12 @@ module.exports = {
             addStyleResource(config.module.rule('sass').oneOf(type))
         })
 
+        // Use SVG as a Vue component
+        const svgRule = config.module.rule('svg')
+        svgRule.uses.clear()
+        svgRule
+            .use('vue-svg-loader')
+            .loader('vue-svg-loader')
+
     },
 }

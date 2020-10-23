@@ -9,10 +9,7 @@
 						height="600"
 						width="400"
 					/>-->
-					<svg
-						height="150"
-						width="150"
-					>
+					<svg height="150" width="150">
 						<circle
 							cx="75"
 							cy="75"
@@ -28,14 +25,8 @@
 								y2="150"
 								gradientUnits="userSpaceOnUse"
 							>
-								<stop
-									offset="0.135417"
-									stop-color="#FEC488"
-								/>
-								<stop
-									offset="1"
-									stop-color="#FEC488"
-								/>
+								<stop offset="0.135417" stop-color="#FEC488" />
+								<stop offset="1" stop-color="#FEC488" />
 							</linearGradient>
 						</defs>
 					</svg>
@@ -55,11 +46,11 @@ import Navbar from "@/components/Navbar";
 
 export default {
 	metaInfo: {
-		title: "Hiya!"
+		title: "Hi!",
 	},
 	components: {
-		Navbar
-	}
+		Navbar,
+	},
 };
 </script>
 

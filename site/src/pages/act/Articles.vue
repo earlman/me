@@ -11,7 +11,7 @@
 			<article class="article-preview">
 				<g-link :to="article.node.path">
 					<meta-info
-						:datetime="article.node.date_published"
+						:datetime="article.node.date"
 						:tags="article.node.tags"
 					/>
 					<h3>{{ article.node.title }}</h3>
@@ -27,15 +27,16 @@
 
 <page-query>
 query {
-    articles: allArticle (sortBy: "date_published" ) {
+    articles: allArticle (sortBy: "date", order: DESC ) {
         edges {
             node {
                 id
                 title
                 path
                 content
-                date_published
+                date
                 tags
+                
             }
         }
     }

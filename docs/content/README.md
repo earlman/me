@@ -141,7 +141,7 @@ However, as editor-in-chief, it's extremely important that the main page for eac
 
 ### Articles
 - `title`:
-- `date-published`: Date when this file was first made. (if published elsewhere, use that date for `date-created`, not `date-published`)
+- `date`: Date when this file was first made.
 - `date-created`: Date when this piece was first created. It's preferred to use the date when the article was first drafted. 
 - `date-updated`: (optional)
 - `tags`:

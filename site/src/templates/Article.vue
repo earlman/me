@@ -7,7 +7,7 @@
 					{{ $page.article.subtitle }}
 				</h4>
 				<meta-info
-					:datetime="$page.article.date_published"
+					:datetime="$page.article.date"
 					:tags="$page.article.tags"
 					class="metainfo"
 				/>
@@ -34,7 +34,7 @@ query ($id: ID!) {
         subtitle
         content
         excerpt
-        date_published
+        date
         date_updated
         path
         tags

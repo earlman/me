@@ -2,19 +2,19 @@
 	<Layout class="page-articles">
 		<header>
 			<h1>Articles</h1>
-			<p>Thoughts I’ve thought were important enough to spend some extra time on.</p>
+			<p>
+				Thoughts I’ve thought were important enough to spend some extra
+				time on.
+			</p>
 		</header>
-		<div
-			v-for="article in $page.articles.edges"
-			:key="article.node.id"
-		>
+		<div v-for="article in $page.articles.edges" :key="article.node.id">
 			<article class="article-preview">
 				<g-link :to="article.node.path">
 					<meta-info
-						:datetime="article.node.date_created"
+						:datetime="article.node.date_published"
 						:tags="article.node.tags"
 					/>
-					<h3>{{article.node.title}}</h3>
+					<h3>{{ article.node.title }}</h3>
 					<div
 						v-html="truncateArticle(article.node.content)"
 						class="article-content"
@@ -27,14 +27,14 @@
 
 <page-query>
 query {
-    articles: allArticle (sortBy: "date_created") {
+    articles: allArticle (sortBy: "date_published" ) {
         edges {
             node {
                 id
                 title
                 path
                 content
-                date_created
+                date_published
                 tags
             }
         }
@@ -50,36 +50,34 @@ const cheerio = require("cheerio");
 
 export default {
 	components: {
-		MetaInfo
+		MetaInfo,
 	},
 	methods: {
-		truncateArticle: html => {
+		truncateArticle: (html) => {
 			// load article html into jquery
 			const $ = cheerio.load(html);
 
 			// select desired text (only paragraph elements)
-			let selection = $("*")
-				.not("meta")
-				.filter("p");
+			let selection = $("*").not("meta").filter("p");
 
 			//truncate article content
 			selection = truncate(selection, 300, {
-				keepWhitespaces: true
+				keepWhitespaces: true,
 			});
 
 			return selection;
-		}
+		},
 	},
-	mounted() {}
+	mounted() {},
 };
 </script>
 
 <style lang="sass" scoped>
 
-    .page-articles
+.page-articles
 
-        h3
-            margin-bottom: var(--space-xs)
+    h3
+        margin-bottom: var(--space-xs)
 
         .article-preview
             margin-bottom: var(--space-lg)
@@ -96,5 +94,7 @@ export default {
 
         header
             margin-bottom: var(--space-lg)
+
+
 
 </style>

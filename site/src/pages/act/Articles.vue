@@ -79,21 +79,24 @@ export default {
     h3
         margin-bottom: var(--space-xs)
 
-        .article-preview
-            margin-bottom: var(--space-lg)
+    .article-preview
+        margin-bottom: var(--space-lg)
 
-            ::v-deep p //v-deep allows you to select elements in child components
-                max-width: unset
-            
-            > a // remove styles added when creating link to the article
-                all: revert
-                text-decoration: none
+        ::v-deep p //v-deep allows you to select elements in child components
+            max-width: unset
+        
+        > a // remove styles added when creating link to the article
+            all: revert
+            text-decoration: none
 
-        .metainfo
-            margin-bottom: var(--space-2xs)
+            &:hover
+                text-decoration: underline
 
-        header
-            margin-bottom: var(--space-lg)
+    .metainfo
+        margin-bottom: var(--space-2xs)
+
+    header
+        margin-bottom: var(--space-lg)
 
 
 

@@ -60,8 +60,8 @@ export default {
 <style lang="sass" scoped>
 .metainfo 
     display: flex
-    margin-bottom: var(--space-xs)
     align-items: baseline
+    margin-bottom: var(--space-2xs)
 
     *
         margin-right: var(--space-xs)
@@ -72,7 +72,7 @@ export default {
     time
         display: flex
 
-    ul
+    ul, p
         margin-bottom: 0 // reset default styles
 
     li 

@@ -97,7 +97,7 @@ query {
             margin-bottom: var(--space-lg)
 
 .page-container
-    min-height: 100vh
+    min-height: 150vh
 
 
 .profilepic img

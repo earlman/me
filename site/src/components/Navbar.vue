@@ -1,8 +1,5 @@
 <template>
-	<div
-		class="navbar"
-		:class="[{default: !colored}, {colored : colored}]"
-	>
+	<div class="navbar" :class="[{ default: !colored }, { colored: colored }]">
 		<div class="accent-bar" />
 		<header>
 			<nav class="menu">
@@ -18,20 +15,18 @@
 					</g-link>
 				</div>
 				<ul>
-					<li
-						v-for="item in menu"
-						:key="item.name"
-					>
-						<g-link
-							:to="item.url"
-							:class="item.name"
-						>{{item.name}}</g-link>
+					<li v-for="item in menu" :key="item.name">
+						<g-link :to="item.url" :class="item.name">{{
+							item.name
+						}}</g-link>
 						<ul v-if="item.submenu">
 							<li
 								v-for="subitem in item.submenu"
 								:key="subitem.name"
 							>
-								<g-link :to="subitem.url">{{subitem.name}}</g-link>
+								<g-link :to="subitem.url">{{
+									subitem.name
+								}}</g-link>
 							</li>
 						</ul>
 					</li>
@@ -47,8 +42,8 @@ export default {
 	props: {
 		colored: {
 			type: Boolean,
-			default: false
-		}
+			default: false,
+		},
 	},
 	data() {
 		return {
@@ -59,17 +54,17 @@ export default {
 					submenu: [
 						{
 							name: "articles",
-							url: "/act/articles"
+							url: "/act/articles",
 						},
 						{
 							name: "notes",
-							url: "/act/notes"
+							url: "/act/notes",
 						},
 						{
 							name: "philosophy",
-							url: "/act/philosophy"
-						}
-					]
+							url: "/act/philosophy",
+						},
+					],
 				},
 				{
 					name: "experience",
@@ -77,21 +72,21 @@ export default {
 					submenu: [
 						{
 							name: "books",
-							url: "/exp/books"
+							url: "/exp/books",
 						},
 						{
 							name: "shows",
-							url: "/exp/shows"
+							url: "/exp/shows",
 						},
 						{
 							name: "movies",
-							url: "/exp/movies"
-						}
-					]
-				}
-			]
+							url: "/exp/movies",
+						},
+					],
+				},
+			],
 		};
-	}
+	},
 };
 </script>
 
@@ -132,7 +127,7 @@ header
 
         ul
             display: flex
-            // flex-wrap: wrap
+            flex-wrap: wrap
             justify-content: center
             padding: 0
             margin-bottom: 0

@@ -11,17 +11,14 @@
 				class="note-container"
 			>
 				<p class="time-container">
-					<time>{{formatTime(note.node.date_created)}}</time>
+					<time>{{ formatTime(note.node.date_created) }}</time>
 				</p>
 				<meta-info
 					:datetime="note.node.date_created"
 					v-show="hideMeta"
 				/>
 				<g-link :to="note.node.path">
-					<div
-						class="note"
-						v-html="note.node.content"
-					></div>
+					<div class="note" v-html="note.node.content"></div>
 				</g-link>
 			</div>
 		</main>
@@ -30,12 +27,13 @@
 
 <page-query>
 query {
-    notes: allNote {
+    notes: allNote (sortBy: "date", order: DESC ) {
         edges {
             node {
                 id
                 path
                 content
+                date
                 date_created
             }
         }
@@ -49,11 +47,11 @@ const moment = require("moment");
 
 export default {
 	components: {
-		MetaInfo
+		MetaInfo,
 	},
 	data() {
 		return {
-			hideMeta: true
+			hideMeta: true,
 		};
 	},
 	methods: {
@@ -63,13 +61,13 @@ export default {
 			const threshold2 = moment().subtract(1, "year"); // 1 year ago
 			// if time is before 2 weeks ago, display date, else display time ago
 			if (time.isBefore(threshold)) {
-				return time.format("MMM D");
+				return time.format("MMM D, YYYY");
 			} else if (time.isBefore(threshold2)) {
 				return time.format("MMM D, YYYY");
 			} else {
 				return time.fromNow();
 			}
-		}
+		},
 	},
 	created() {
 		moment.updateLocale("en", {
@@ -79,7 +77,7 @@ export default {
 				s: "a few seconds",
 				ss: "%d seconds",
 				m: "a minute",
-				mm: "%d minutes",
+				mm: "%d min",
 				h: "an hour",
 				hh: "%d hours",
 				d: "a day",
@@ -87,10 +85,10 @@ export default {
 				M: "a month",
 				MM: "%d mon",
 				y: "a year",
-				yy: "%d years"
-			}
+				yy: "%d years",
+			},
 		});
-	}
+	},
 };
 </script>
 
@@ -104,6 +102,8 @@ h1
 
     .time-container
         margin-bottom: var(--space-2xs)
+        max-width: 8ch
+        margin-right: var(--space-2xs)
 
     .metainfo
         position: absolute

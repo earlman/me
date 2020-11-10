@@ -64,6 +64,10 @@ export default {
 							name: "philosophy",
 							url: "/act/philosophy",
 						},
+						{
+							name: "accomplishments",
+							url: "/act/accomplishments",
+						},
 					],
 				},
 				{

@@ -3,8 +3,7 @@
 		<header>
 			<h1>Accomplishments</h1>
 			<p>
-				Noteworthy event of which I am a primary cause (but not
-				necessarily <em>the</em> primary cause).
+				Noteworthy event of which I am a primary cause.
 			</p>
 		</header>
 		<div>

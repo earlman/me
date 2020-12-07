@@ -61,9 +61,9 @@ export default {
 			const threshold2 = moment().subtract(1, "year"); // 1 year ago
 			// if time is before 2 weeks ago, display date, else display time ago
 			if (time.isBefore(threshold)) {
-				return time.format("MMM D, YYYY");
+				return time.format("MMM D YYYY");
 			} else if (time.isBefore(threshold2)) {
-				return time.format("MMM D, YYYY");
+				return time.format("MMM D YYYY");
 			} else {
 				return time.fromNow();
 			}
@@ -73,15 +73,15 @@ export default {
 		moment.updateLocale("en", {
 			relativeTime: {
 				future: "in %s",
-				past: "%s ago",
+				past: "%s", //was "%s ago"
 				s: "a few seconds",
 				ss: "%d seconds",
 				m: "a minute",
 				mm: "%d min",
 				h: "an hour",
-				hh: "%d hours",
+				hh: "%d h",
 				d: "a day",
-				dd: "%d days",
+				dd: "%d d",
 				M: "a month",
 				MM: "%d mon",
 				y: "a year",
@@ -93,36 +93,41 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-
 h1
     margin-bottom: var(--space-md)
 
 .note-container
     display: contents
 
+    &:hover .time-container
+        opacity: 1
+
+    ::v-deep p
+        margin: 0
+
     .time-container
-        margin-bottom: var(--space-2xs)
-        max-width: 8ch
-        margin-right: var(--space-2xs)
+        // font-size: var(--d-sm)
+        max-width: 6ch
+        // margin-bottom: var(--space-2xs)
+        opacity: .6
 
     .metainfo
         position: absolute
         display: none
 
     .note
-        margin-bottom: var(--space-sm)
+        // margin-bottom: var(--space-sm)
 
         @include md
-            margin-bottom: var(--space-md)
+            // margin-bottom: var(--space-md)
 
 main, .title-container
-    
+
     @include md
         display: grid
         grid-template-columns: 1fr 7fr
+        grid-gap: var(--space-md) 0
+        // align-items: center
 
 //presentational
-
-    
-
 </style>

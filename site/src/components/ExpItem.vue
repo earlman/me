@@ -60,6 +60,7 @@ export default {
 
 .title
     font-familiy: var(--font-primary)
+    width: 80%
 
     a
         color: var(--color-t)
@@ -69,11 +70,8 @@ export default {
     a:hover
         color: var(--color-a)
 
-
 .rating
     font-family: var(--font-secondary)
     color: var(--color-t-c)
     font-size: var(--d-sm)
-
-
 </style>

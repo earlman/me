@@ -2,6 +2,7 @@
 // The Client API can be used here. Learn more: gridsome.org/docs/client-api
 
 import DefaultLayout from "~/layouts/Default.vue";
+import "./styles/remark-container-styles.css";
 
 // Import Design System
 import "~/styles/index.sass";

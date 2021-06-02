@@ -1,11 +1,14 @@
 <template>
 	<div class="exp-container">
-		<div
-			v-for="item in items"
-			:key="item.node.key"
-		>
-			<exp-item :item="item" />
-		</div>
+		<table class="exp-table">
+			<div
+				class="displaycontents"
+				v-for="item in items"
+				:key="item.node.key"
+			>
+				<exp-item :item="item" />
+			</div>
+		</table>
 	</div>
 </template>
 
@@ -16,15 +19,21 @@ export default {
 	props: {
 		items: {
 			type: Array,
-			default: ["item 1", "item 2", "item 3"]
-		}
+			default: ["item 1", "item 2", "item 3"],
+		},
 	},
 	components: {
-		ExpItem
-	}
+		ExpItem,
+	},
 };
 </script>
 
 <style lang="sass" scoped>
+.displaycontents
+    display: contents
+
+.exp-table
+    margin: 0
+    width: 100%
 
 </style>

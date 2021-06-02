@@ -78,14 +78,14 @@ Items in an `/experience` category may have optional notes stored in markdown as
 
 **4)** Comments on the review itself such as *why it was written* or *how my previous mindset may have altered review* should be written in a `meta` container like so:
     
-    ::: meta
-    <time datetime="2019-12-12">Updated December 12, 2019</time>
-    I fell asleep for a couple episodes in the middle of this but I really don't think they would've change my opinion of the show as a whole
-    :::
+:::meta
+<time datetime="2019-12-12">Updated December 12, 2019</time>
+I fell asleep for a couple episodes in the middle of this but I really don't think they would've change my opinion of the show as a whole
+:::
     
-    ::: meta
-    I actually new nothing of the Manson Murders before watching this movie. I imagine living through those would have drastically changed my experience of the final scene, and perhaps of the rising action as well. 
-    :::
+:::meta
+I actually new nothing of the Manson Murders before watching this movie. I imagine living through those would have drastically changed my experience of the final scene, and perhaps of the rising action as well. 
+:::
 
 #### Why not put all the reviews into `/articles`?
 
@@ -141,7 +141,7 @@ However, as editor-in-chief, it's extremely important that the main page for eac
 
 ### Articles
 - `title`:
-- `date-published`: Date when this file was first made. (if published elsewhere, use that date for `date-created`, not `date-published`)
+- `date`: Date when this file was first made.
 - `date-created`: Date when this piece was first created. It's preferred to use the date when the article was first drafted. 
 - `date-updated`: (optional)
 - `tags`:

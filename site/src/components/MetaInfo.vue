@@ -1,26 +1,19 @@
 <template>
 	<div class="metainfo">
-		<time
-			:datetime="datetime"
-			v-if="showDate || showTime"
-		>
+		<time :datetime="datetime" v-if="showDate || showTime">
 			<div v-if="showDate">
-				<span>{{date}}</span>
+				<p class="date">{{ date }}</p>
 				<!-- <span>·</span> -->
 			</div>
 			<div v-if="showTime">
-				<span>{{time}}</span>
+				<p class="time">{{ time }}</p>
 				<!-- <span>·</span> -->
 			</div>
 		</time>
 
 		<ul v-if="showTags">
-			<li
-				v-for="(tag, index) in tags"
-				:key="index"
-				class="tags"
-			>
-				<span>{{tag}}</span>
+			<li v-for="(tag, index) in tags" :key="index" class="tags">
+				<p>{{ tag }}</p>
 			</li>
 		</ul>
 	</div>
@@ -33,24 +26,24 @@ export default {
 	props: {
 		datetime: {
 			type: String,
-			default: "YYYYDDMMTHH:mm"
+			default: "YYYYDDMMTHH:mm",
 		},
 		tags: {
 			type: Array,
-			default: ["Tag 1", "Tag 2", "Tag 3"]
+			default: ["Tag 1", "Tag 2", "Tag 3"],
 		},
 		showDate: {
 			type: Boolean,
-			default: true
+			default: true,
 		},
 		showTime: {
 			type: Boolean,
-			default: false
+			default: false,
 		},
 		showTags: {
 			type: Boolean,
-			default: true
-		}
+			default: true,
+		},
 	},
 
 	computed: {
@@ -59,15 +52,16 @@ export default {
 		},
 		time() {
 			return moment(this.datetime).format("h:mm a");
-		}
-	}
+		},
+	},
 };
 </script>
 
 <style lang="sass" scoped>
 .metainfo 
     display: flex
-    margin-bottom: var(--space-xs)
+    align-items: baseline
+    margin-bottom: var(--space-2xs)
 
     *
         margin-right: var(--space-xs)
@@ -78,7 +72,7 @@ export default {
     time
         display: flex
 
-    ul
+    ul, p
         margin-bottom: 0 // reset default styles
 
     li 
@@ -91,7 +85,7 @@ export default {
 
 //presentational
 *
-    color: var(--color-a)
+    color: var(--color-t-c)
 
 .tags
     text-transform: uppercase

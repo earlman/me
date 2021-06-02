@@ -1,8 +1,5 @@
 <template>
-	<div
-		class="navbar"
-		:class="[{default: !colored}, {colored : colored}]"
-	>
+	<div class="navbar" :class="[{ default: !colored }, { colored: colored }]">
 		<div class="accent-bar" />
 		<header>
 			<nav class="menu">
@@ -18,20 +15,18 @@
 					</g-link>
 				</div>
 				<ul>
-					<li
-						v-for="item in menu"
-						:key="item.name"
-					>
-						<g-link
-							:to="item.url"
-							:class="item.name"
-						>{{item.name}}</g-link>
+					<li v-for="item in menu" :key="item.name">
+						<g-link :to="item.url" :class="item.name">{{
+							item.name
+						}}</g-link>
 						<ul v-if="item.submenu">
 							<li
 								v-for="subitem in item.submenu"
 								:key="subitem.name"
 							>
-								<g-link :to="subitem.url">{{subitem.name}}</g-link>
+								<g-link :to="subitem.url">{{
+									subitem.name
+								}}</g-link>
 							</li>
 						</ul>
 					</li>
@@ -47,8 +42,8 @@ export default {
 	props: {
 		colored: {
 			type: Boolean,
-			default: false
-		}
+			default: false,
+		},
 	},
 	data() {
 		return {
@@ -59,13 +54,21 @@ export default {
 					submenu: [
 						{
 							name: "articles",
-							url: "/act/articles"
+							url: "/act/articles",
 						},
 						{
 							name: "notes",
-							url: "/act/notes"
-						}
-					]
+							url: "/act/notes",
+						},
+						{
+							name: "philosophy",
+							url: "/act/philosophy",
+						},
+						{
+							name: "accomplishments",
+							url: "/act/accomplishments",
+						},
+					],
 				},
 				{
 					name: "experience",
@@ -73,28 +76,28 @@ export default {
 					submenu: [
 						{
 							name: "books",
-							url: "/exp/books"
+							url: "/exp/books",
 						},
 						{
 							name: "shows",
-							url: "/exp/shows"
+							url: "/exp/shows",
 						},
 						{
 							name: "movies",
-							url: "/exp/movies"
-						}
-					]
-				}
-			]
+							url: "/exp/movies",
+						},
+					],
+				},
+			],
 		};
-	}
+	},
 };
 </script>
 
 <style lang="sass" scoped>
 
 .action
-  pointer-events: none
+    pointer-events: none
 
 header
     margin: auto
@@ -119,6 +122,7 @@ header
             justify-content: space-between
 
         .logo
+            margin: 0
             width: 300px
             text-align: center
             @include md
@@ -127,7 +131,7 @@ header
 
         ul
             display: flex
-            // flex-wrap: wrap
+            flex-wrap: wrap
             justify-content: center
             padding: 0
             margin-bottom: 0
@@ -180,7 +184,7 @@ header
                             
 //presentational
 .accent-bar
-    background-color: var(--color-t)
+    background-color: var(--color-a-bar)
 
 li
     list-style: none
@@ -193,18 +197,17 @@ li
 .navbar.default 
     opacity: .2
     *
-        color: var(--color-t)      
+        color: var(--color-p)      
     &:hover 
         opacity: 1
-        --color-t: var(--color-a)
 
 .colored
-    --color-t: var(--color-a)
+    --color-t: var(--color-p)
     a:hover
-        color: var(--color-t)
+        color: var(--color-p)
         text-decoration: none
     a:visited
-        color: var(--color-t)
+        color: var(--color-p)
 
 
 </style>

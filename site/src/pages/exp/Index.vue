@@ -4,15 +4,23 @@
 			<h1>Experience</h1>
 			<div v-html="$page.overview.content"></div>
 		</header>
-		<h2>Latest</h2>
-		<h3>Books</h3>
-		<exp-container :items="$page.books.edges" />
+		<section class="latest">
+			<h2>Latest</h2>
+			<article>
+				<h3>Books</h3>
+				<exp-container :items="$page.books.edges" />
+			</article>
 
-		<h3>Movies</h3>
-		<exp-container :items="$page.movies.edges" />
+			<article>
+				<h3>Movies</h3>
+				<exp-container :items="$page.movies.edges" />
+			</article>
 
-		<h3>Shows</h3>
-		<exp-container :items="$page.shows.edges" />
+			<article>
+				<h3>Shows</h3>
+				<exp-container :items="$page.shows.edges" />
+			</article>
+		</section>
 	</Layout>
 </template>
 
@@ -74,11 +82,15 @@ import ExpContainer from "@/components/ExpContainer";
 
 export default {
 	components: {
-		ExpContainer
-	}
+		ExpContainer,
+	},
 };
 </script>
 
 <style lang="sass" scoped>
+header
+    margin-bottom: var(--space-md)
 
+article
+    margin-bottom: var(--space-md)
 </style>

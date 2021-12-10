@@ -1,13 +1,13 @@
 <template>
 	<Layout>
-		<div v-for="edge in $page.allInstagramPhoto.edges" :key="edge.node.id">
+		<!-- <div v-for="edge in $page.allInstagramPhoto.edges" :key="edge.node.id">
 			<g-image :src="edge.node.display_url"> </g-image>
 			{{ edge.node.edge_media_to_caption }}
-		</div>
+		</div> -->
 	</Layout>
 </template>
 
-<page-query>
+<!-- <page-query>
 query {
    allInstagramPhoto {
       edges {
@@ -25,7 +25,7 @@ query {
       }
    }
 }
-</page-query>
+</page-query> -->
 
 <script>
 export default {};

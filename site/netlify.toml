@@ -3,3 +3,4 @@
   publish = "dist/"
   command = "yarn build"
   ignore = "/bin/false"
+  environment = { NODE_VERSION = "8.x" }
